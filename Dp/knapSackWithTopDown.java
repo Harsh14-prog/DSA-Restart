@@ -1,6 +1,6 @@
 package Dp;
 
-public class knapSackWithDp {
+public class knapSackWithTopDown {
 
     static int[][] dp;
 
