@@ -21,7 +21,7 @@ public class createTree {
     static Scanner sc = new Scanner(System.in);
 
     // Build Tree (Preorder input with -1 as NULL)
-    public static Node buildTree() {
+    public static Node buildTree(){
 
         int value = sc.nextInt();
 
@@ -39,16 +39,19 @@ public class createTree {
 
     // 🔹 Preorder
     public static void preOrder(Node root) {
+       // on each node do root -> left -> right
         if (root == null)
             return;
 
         System.out.print(root.data + " ");
         preOrder(root.left);
-        preOrder(root.right);
+        preOrder(root.right);  // during backtrack
     }
 
     // 🔹 Inorder
     public static void inorder(Node root) {
+        
+        // try to follow left -> root -> right on each
         if (root == null)
             return;
 
@@ -67,7 +70,7 @@ public class createTree {
         System.out.print(root.data + " ");
     }
 
-    // 🔹 Level Order (FIXED)
+    // 🔹 Level Order 
     public static void levelOrder(Node root) {
 
         if (root == null)
