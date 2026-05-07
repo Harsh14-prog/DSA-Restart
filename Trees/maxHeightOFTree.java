@@ -1,6 +1,5 @@
 package Trees;
 
-import Trees.Node;
 
 public class maxHeightOFTree {
 
