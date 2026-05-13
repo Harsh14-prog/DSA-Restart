@@ -1,4 +1,4 @@
-package Dp;
+package Dp.knapSack;
 
 // ------------ Equal Partition → Subset Sum (target = totalSum / 2) ---------------
 

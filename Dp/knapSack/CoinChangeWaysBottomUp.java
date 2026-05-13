@@ -1,4 +1,4 @@
-package Dp;
+package Dp.knapSack;
 
 public class CoinChangeWaysBottomUp {
 public static void main(String[] args) {

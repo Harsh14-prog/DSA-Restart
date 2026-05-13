@@ -1,4 +1,4 @@
-package Dp;
+package Dp.knapSack;
 
 public class CountSubsetWithGivenDifference {
 public static void main(String[] args) {

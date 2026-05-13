@@ -1,4 +1,4 @@
-package Dp;
+package Dp.knapSack;
 
 // index based solution -->> “Start from beginning → move forward” --------------->>>>>
 //------------------------------------------------------------------------

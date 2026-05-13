@@ -1,5 +1,5 @@
 
-package Dp;
+package Dp.knapSack;
 
 public class knapSackWithBottomUpTabulation {
     public static void main(String[] args) {
