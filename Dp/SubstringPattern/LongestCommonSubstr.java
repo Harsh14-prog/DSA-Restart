@@ -37,7 +37,7 @@ public class LongestCommonSubstr {
                 if (s1.charAt(i - 1) == s2.charAt(j - 1)) {
 
                     /*
-                     * Continue substring diagonally
+                     * Continue substring diagonally , stored length in each cell
                      */
                     dp[i][j] = 1 + dp[i - 1][j - 1];
 
