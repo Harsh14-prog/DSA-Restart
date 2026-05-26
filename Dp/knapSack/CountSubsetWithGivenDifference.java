@@ -46,7 +46,7 @@ public static void main(String[] args) {
      * Step 5: Base Case
      *
      * There is exactly 1 way to form sum = 0:
-     * → by taking no elements (empty subset)
+     * → by taking no elements(skip) (empty subset)
      */
     for(int i = 0; i <= n; i++){
         dp[i][0] = 1;
