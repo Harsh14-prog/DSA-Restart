@@ -1,30 +1,42 @@
 package slidingWindow;
 
 public class maxSumSubArrOfSizeK {
-    public static void main(String[] args) {
-        int[] nums = {2,1,5,1,3,2};
-        int n = nums.length ;
-        int k = 3 ;
-        int sum = 0 ;
-        int maxSum = 0 ;
+  public static void main(String[] args) {
 
-        int l = 0 , h = 0 ;
+    int[] nums = { 2, 1, 5, 1, 3, 2 };
 
-        while (h < n){
+    int k = 3;
 
-          sum += nums[h];
+    int l = 0;
 
-          if(h-l+1 < k){
-             h++;
-          }
-          else if(h-l+1 == k){
-            maxSum = Math.max(maxSum , sum);
-            sum -= nums[l];
-            l++;
-            h++;
-          }
-        }
+    // Current window sum
+    int sum = 0;
 
-        System.out.println(maxSum);
+    // Stores answer
+    int maxSum = 0;
+
+    for (int h = 0; h < nums.length; h++) {
+
+      // Include current element
+      sum += nums[h];
+
+      // Window size reached k
+      if (h - l + 1 == k) {
+
+        // Update answer
+        maxSum = Math.max(maxSum, sum);
+
+        // Slide window
+        //
+        // Remove lmost element
+        sum -= nums[l];
+
+        // Move l pointer
+        l++;
+      }
     }
+
+    System.out.println(maxSum);
+
+  }
 }

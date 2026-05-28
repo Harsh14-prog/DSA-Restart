@@ -68,7 +68,7 @@ public class MinimumPathSumTriangularGridTabulation {
                 Valid columns for row i are:
                 0 to i
             */
-            for(int j = 0; j <= i; j++){
+            for(int j = i; j >= 0; j--){
 
                 /*
                     MOVE DOWN
