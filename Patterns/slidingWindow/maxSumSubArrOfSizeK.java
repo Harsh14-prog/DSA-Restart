@@ -1,4 +1,4 @@
-package slidingWindow;
+package Patterns.slidingWindow;
 
 public class maxSumSubArrOfSizeK {
   public static void main(String[] args) {
