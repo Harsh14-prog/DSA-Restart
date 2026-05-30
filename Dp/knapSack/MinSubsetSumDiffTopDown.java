@@ -29,12 +29,13 @@ public static int solve(int[] nums , int n , int sum1 , int totalSum){
     int take = solve(nums , n-1 , sum1 + nums[n-1] , totalSum);
 
     /*
-     * Choice 2: Exclude from subset1 (goes to subset2)
+     * Choice 2: Exclude from subset1 (auto goes to subset2)
      */
     int skip = solve(nums , n-1 , sum1 , totalSum);
 
     /*
      * Store minimum difference
+       take and skip holds diff betwn sum 1 and sum2
      */
     return dp[n][sum1] = Math.min(take , skip);
 }
