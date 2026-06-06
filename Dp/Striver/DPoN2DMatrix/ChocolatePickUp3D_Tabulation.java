@@ -86,6 +86,9 @@ public class ChocolatePickUp3D_Tabulation {
 
                             int nextJ1 = j1 + dj1;
                             int nextJ2 = j2 + dj2;
+                            // we have already done these movement
+                            // downward we are checking either is this movement
+                            // valid or not
 
                             /*
                              * Valid next position.

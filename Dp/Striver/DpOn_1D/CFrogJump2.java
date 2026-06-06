@@ -1,4 +1,4 @@
-package Dp.Striver;
+package Dp.Striver.DpOn_1D;
 
 public class CFrogJump2 {
 

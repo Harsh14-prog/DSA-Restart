@@ -50,6 +50,8 @@ public class InfixEvaluation {
 
     public static void main(String[] args) {
 
+        // 2 + 3 * 4 - 5   explains why while loop after for loop
+
         // Infix expression
         String s = "8+(3*2)-(4/2)+5";
 

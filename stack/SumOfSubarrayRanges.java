@@ -71,7 +71,7 @@ public class SumOfSubarrayRanges {
                  * 
                  * element × leftChoices × rightChoices
                  */
-                sum += (long) nums[mid] * left * right;
+                sum += 1L * nums[mid] * left * right;
             }
 
             // Push current index
@@ -103,7 +103,7 @@ public class SumOfSubarrayRanges {
 
             int right = nse - mid;
 
-            sum += (long) nums[mid] * left * right;
+            sum += 1L * nums[mid] * left * right;
         }
 
         return sum;
@@ -170,7 +170,7 @@ public class SumOfSubarrayRanges {
                 /*
                  * Contribution formula
                  */
-                sum += (long) nums[mid] * left * right;
+                sum += 1L * nums[mid] * left * right;
             }
 
             // Push current index
@@ -202,7 +202,7 @@ public class SumOfSubarrayRanges {
 
             int right = nge - mid;
 
-            sum += (long) nums[mid] * left * right;
+            sum += 1L * nums[mid] * left * right;
         }
 
         return sum;
