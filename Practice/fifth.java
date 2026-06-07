@@ -8,11 +8,9 @@ public class fifth {
 
         if (sign == '+' || sign == '-') {
             return 1;
-        } 
-        else if (sign == '*' || sign == '/' || sign == '%') {
+        } else if (sign == '*' || sign == '/' || sign == '%') {
             return 2;
-        } 
-        else if (sign == '^') {
+        } else if (sign == '^') {
             return 3;
         }
 
@@ -42,7 +40,7 @@ public class fifth {
         // Infix expression
         String s = "8+(3*2)-(4/2)+5";
 
-        Stack<Integer> st1 = new Stack<>();
+        Stack<String> st1 = new Stack<>();
 
         Stack<Character> st2 = new Stack<>();
 
@@ -51,38 +49,37 @@ public class fifth {
             char ch = s.charAt(i);
 
             if (Character.isDigit(ch)) {
-                st1.push(ch - '0');
-            } 
-            else if (st2.isEmpty() || ch == '(') {
+                st1.push(String.valueOf(ch));
+            } else if (st2.isEmpty() || ch == '(') {
                 st2.push(ch);
-            } 
-            else if (ch == ')') {
+            } else if (ch == ')') {
 
                 while (!st2.isEmpty() && st2.peek() != '(') {
 
-                    int v2 = st1.pop();
-                    int v1 = st1.pop();
+                    String v2 = st1.pop();
+                    String v1 = st1.pop();
                     int sign = st2.pop();
 
-                    int ans = solve(v1, v2, sign);
+                    StringBuilder sb = new StringBuilder();
+                    sb.append(sign).append(v1).append(v2);
 
-                    st1.push(ans);
+                    st1.push(sb.toString());
                 }
 
                 st2.pop();
 
-            } 
-            else {
+            } else {
 
                 while (!st2.isEmpty() && st2.peek() != '(' && precendance(st2.peek()) >= precendance(ch)) {
 
-                    int v2 = st1.pop();
-                    int v1 = st1.pop();
+                    String v2 = st1.pop();
+                    String v1 = st1.pop();
                     int sign = st2.pop();
 
-                    int ans = solve(v1, v2, sign);
+                    StringBuilder sb = new StringBuilder();
+                    sb.append(sign).append(v1).append(v2);
 
-                    st1.push(ans);
+                    st1.push(sb.toString());
                 }
                 st2.push(ch);
             }
@@ -90,13 +87,14 @@ public class fifth {
 
         while (!st2.isEmpty()) {
 
-            int v2 = st1.pop();
-            int v1 = st1.pop();
+            String v2 = st1.pop();
+            String v1 = st1.pop();
             int sign = st2.pop();
 
-            int ans = solve(v1, v2, sign);
+            StringBuilder sb = new StringBuilder();
+            sb.append(sign).append(v1).append(v2);
 
-            st1.push(ans);
+            st1.push(sb.toString());
         }
 
         System.out.println(st1.peek());
